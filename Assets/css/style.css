@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+h1{
+    color: #ddd;
+    font-size: 80px;
+    letter-spacing: 5px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    letter-spacing: -5px;
+    
+}
+section{
+   text-align: center;
+    background: #000;
+    height: 100vh;
+    width: 100%;
+}
+section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to right, #c5cd17, #cbb000, #cc9300, #c87600, #c05900);
+    mix-blend-mode: color;
+}
+video{
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+}
+
+h1 span{
+    opacity: 0;
+    display: inline-block;
+    animation: animate 1s linear forwards;
+    background: #25CC0F;
+background: -webkit-linear-gradient(to bottom right, #25CC0F 22%, #D6E1FF 47%, #CF521D 83%);
+background: -moz-linear-gradient(to bottom right, #25CC0F 22%, #D6E1FF 47%, #CF521D 83%);
+background: linear-gradient(to bottom right, #25CC0F 22%, #D6E1FF 47%, #CF521D 83%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0px);
+    }
+}
+h1 span:nth-child(1){
+    animation-delay: 1s;
+}
+h1 span:nth-child(2){
+    animation-delay: 2s;
+}
+h1 span:nth-child(3){
+    animation-delay: 2.5s;
+}
+h1 span:nth-child(4){
+    animation-delay: 3s;
+}
+h1 span:nth-child(5){
+    animation-delay: 3.75s;
+}
+
+
+@media only screen and (max-width: 567px) {
+    video{
+        margin-top: 200px;
+    }
+}
+
+
+
+
+
+
+
+
+
